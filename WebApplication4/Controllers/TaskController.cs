@@ -57,7 +57,7 @@ namespace WebApplication4.Controllers
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
             }
             var taskModel = this.taskRepository.Get(result);
-            return taskModel == null ? Request.CreateResponse(HttpStatusCode.BadRequest) : Request.CreateResponse(HttpStatusCode.OK, new { status=taskModel.Status,timestamp=taskModel.TimeStamp});
+            return taskModel == null ? Request.CreateResponse(HttpStatusCode.NotFound) : Request.CreateResponse(HttpStatusCode.OK, new { status=taskModel.Status,timestamp=taskModel.TimeStamp});
 
         }
 
