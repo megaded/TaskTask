@@ -10,6 +10,7 @@ namespace WebApplication4.Infrastructure.Database
     public class TaskModelContext:DbContext
     {
         public DbSet<TaskModel> Tasks { get; set; }
+        public TaskModelContext() : base("name=TaskContext") { }
 
     }
 }

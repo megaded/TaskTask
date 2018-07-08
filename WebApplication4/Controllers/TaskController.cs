@@ -34,6 +34,7 @@ namespace WebApplication4.Controllers
             {
                 var model = taskRepository.Get(ttt.Result.Item2.ID);
                 model.Status = "running";
+                model.TimeStamp = DateTime.Now;
                 taskRepository.Update(model);
                 return model.ID;
             });
@@ -65,6 +66,7 @@ namespace WebApplication4.Controllers
         {
             var taskModel = this.taskRepository.Get((Guid)taskId);
             taskModel.Status = "finished";
+            taskModel.TimeStamp = DateTime.Now;
             this.taskRepository.Update(taskModel);
         }
     }

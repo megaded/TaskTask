@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
+  <parameter name="TaskContext-Web.config Connection String" description="TaskContext Строка подключения в web.config, используемая приложением для доступа к базе данных." defaultValue="Data Source=tcp:main.database.windows.net,1433;Initial Catalog=website20180706011920_db;User ID=megaded999@main;Password=Bizzard1990" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\1\\source\\repos\\WebApplication4\\WebApplication4\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TaskContext']/@connectionString" />
+  </parameter>
   <parameter name="WebApplication4.Infrastructure.Database.TaskModelContext-Web.config Connection String" description="WebApplication4.Infrastructure.Database.TaskModelContext Строка подключения в web.config, используемая приложением для доступа к базе данных." defaultValue="WebApplication4.Infrastructure.Database.TaskModelContext_ConnectionString" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="c:\\users\\1\\source\\repos\\WebApplication4\\WebApplication4\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='WebApplication4.Infrastructure.Database.TaskModelContext']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\1\\source\\repos\\WebApplication4\\WebApplication4\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='WebApplication4.Infrastructure.Database.TaskModelContext']/@connectionString" />
   </parameter>
 </parameters>
